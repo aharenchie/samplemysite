@@ -1,0 +1,13 @@
+{% extends "imgfix/base.html" %}
+
+{% block content %}
+
+    <h1>Person List</h1>
+    <a href="/imgfix/create">create person</a>
+    <ul>
+    {% for person in object_list %}
+        <li>名前：{{ person.name }}、年齢：{{ person.age }}</li>
+    {% endfor %}
+    </ul>
+
+{% endblock %}
